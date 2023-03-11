@@ -11,11 +11,22 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Career from "./components/Career";
 import Founder from './components/Founder';
+import ClassComp from './components/ClassComp';
+import Funccomp from './components/Funccomp';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home/>,
+  },
+  {
+    path: "/class",
+    element:<ClassComp/>,
+  },
+
+  {
+    path: "/function",
+    element: <Funccomp/>,
   },
   {
     path: "/about",
@@ -38,7 +49,6 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+
 )
